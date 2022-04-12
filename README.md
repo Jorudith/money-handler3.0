@@ -1,4 +1,4 @@
-Hello! 
+# Hello! 
 
 I'm John Ryan C. Salvador, the author and programmer of this project
 
