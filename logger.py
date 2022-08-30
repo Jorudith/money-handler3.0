@@ -19,4 +19,5 @@ transaction_file_handler.setFormatter(transaction_formatter)
 logger.addHandler(debug_file_handler)
 logger.addHandler(transaction_file_handler)
 
-logger.info("first log. initialized log files")
+if __name__ == "__main__":
+    logger.info("From Main")

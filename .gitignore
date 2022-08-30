@@ -15,6 +15,9 @@ json/
 *.txt
 doc/
 
+# Ignore img folder
+img/
+
 # Ignore lib
 lib/
 
