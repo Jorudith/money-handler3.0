@@ -17,11 +17,14 @@ root.geometry(f"{AS.get('app_width')}x{AS.get('app_height')}")
 root.resizable(AS.get("app_isresizeable"), AS.get("app_isresizeable"))
 root.configure(bg=AS.get("app_bg"))
 
-left_frame = ttk.Frame(root, width=100, height=100)
-right_frame = ttk.Frame(root, width=100, height=100)
+left_frame = ttk.Frame(root, width=155, height=790)
+right_frame = ttk.Frame(root, width=830, height=790)
 
-left_frame.place(x=0, y=0)
-right_frame.place(x=101, y=0)
+left_frame.place(x=5, y=5)
+right_frame.place(x=165, y=5)
 
+main_title = ttk.Label(left_frame, text="Money Handler", font=("Bahnschirft", 10))
+
+main_title.place(x=0, y=0)
 
 root.mainloop()
