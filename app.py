@@ -58,8 +58,8 @@ side_frame.rowconfigure(4, weight=1)
 side_frame.rowconfigure(5, weight=0)
 
 # main_frame children initialization (HOME)
-home_label = tk.Label(main_frame, text="Welcome to Money Handler!", fg="#ffffff", bg="#31b573", font=("Bahnschrift", 20))
-home_description = tk.Label(main_frame, text="Where tracking your budget and logging down purchases can be made simpler. \nStart by adding your existing funds by pressing the \"ADD FUNDS\" button.", fg="#ffffff", bg="#31b573", font=("Bahnschrift", 13))
+home_label = tk.Label(main_frame, text="Welcome to Money Handler!", fg="#ffffff", bg="#31b573", font=("Bahnschrift", 20), anchor="center")
+home_description = tk.Label(main_frame, text="Where tracking your budget and logging down purchases can be made simpler. \nStart by adding your existing funds by pressing the \"ADD FUNDS\" button.", fg="#ffffff", bg="#31b573", font=("Bahnschrift", 13), anchor="center")
 
 # main_frame children grid (HOME)
 home_label.grid(row=0, column=0, pady=8, sticky="ew")
@@ -68,12 +68,12 @@ home_description.grid(row=1, column=0, pady=8, sticky="ew")
 main_frame.columnconfigure(0, weight=1)
 
 # main_frame children initialization (ADD FUNDS)
-addfundstitle_label = tk.Label(main_frame, text="Add Funds")
-addfundsamount_label = tk.Label(main_frame, text="Amount:")
-addfundsamount_entry = tk.Entry(main_frame)
-addfundscomment_label = tk.Label(main_frame, text="Comment:")
-addfundscomment_entry = tk.Entry(main_frame)
-addfunds_button = tk.Button(main_frame, text="Submit")
+aftitle_label = tk.Label(main_frame, text="- ADD FUNDS -", fg="#ffffff", bg="#31b573", font=("Bahnschrift", 20))
+afamount_label = tk.Label(main_frame, text="Amount:", fg="#ffffff", bg="#31b573", font=("Bahnschrift", 15))
+afamount_entry = tk.Entry(main_frame)
+afcomment_label = tk.Label(main_frame, text="Comment:", fg="#ffffff", bg="#31b573", font=("Bahnschrift", 15))
+afcomment_entry = tk.Entry(main_frame)
+af_button = tk.Button(main_frame, text="SUBMIT", fg="#ffffff", bg="#31b573", font=("Bahnschrift", 17), padx=30, anchor="center", activeforeground="#31b573", activebackground="#ffffff")
 
 # deduct funds fixed comments
 COST_OF_LIVING = {1: "Groceries", 2: "Electricity", 3: "Water", 4: "Other Cost of Living"}
@@ -86,11 +86,21 @@ DEBT = {1: "One's Debt", 2: "Someone's Debt"}
 MISCELLANEOUS = {1: "Travel Expenses", 2: "Random Buys", 3: "Mug", 4: "Other Miscellaneous"}
 
 # main_frame children initialization (DEDUCT FUNDS)
-deductfundstitle_label = tk.Label(main_frame, text="Deduct Funds")
-deductfundsamount_label = tk.Label(main_frame, text="Amount:")
-deductfundsamount_entry = tk.Entry(main_frame)
-deductfundscomment_label = tk.Label(main_frame, text="Comment:")
-deductfundscomment_entry = tk.Entry(main_frame)
-deductfunds_button = tk.Button(main_frame, text="Submit")
+
+df_col_button = tk.Button(main_frame, text="Cost of Living", fg="#ffffff", bg="#31b573", font=("Bahnschrift", 17), anchor="center")
+df_pe_button = tk.Button(main_frame, text="Property Expenses", fg="#ffffff", bg="#31b573", font=("Bahnschrift", 17), anchor="center")
+df_me_button = tk.Button(main_frame, text="Medical Expenses", fg="#ffffff", bg="#31b573", font=("Bahnschrift", 17), anchor="center")
+df_is_button = tk.Button(main_frame, text="Insurance", fg="#ffffff", bg="#31b573", font=("Bahnschrift", 17), anchor="center")
+df_t_button = tk.Button(main_frame, text="Taxes", fg="#ffffff", bg="#31b573", font=("Bahnschrift", 17), anchor="center")
+df_iv_button = tk.Button(main_frame, text="Investments", fg="#ffffff", bg="#31b573", font=("Bahnschrift", 17), anchor="center")
+df_d_button = tk.Button(main_frame, text="Debt", fg="#ffffff", bg="#31b573", font=("Bahnschrift", 17), anchor="center")
+df_mi_button = tk.Button(main_frame, text="Miscellaneous", fg="#ffffff", bg="#31b573", font=("Bahnschrift", 17), anchor="center")
+
+dftitle_label = tk.Label(main_frame, text="- DEDUCT FUNDS -", fg="#ffffff", bg="#31b573", font=("Bahnschrift", 20))
+dfamount_label = tk.Label(main_frame, text="Amount:", fg="#ffffff", bg="#31b573", font=("Bahnschrift", 15))
+dfamount_entry = tk.Entry(main_frame)
+dfcomment_label = tk.Label(main_frame, text="Comment:", fg="#ffffff", bg="#31b573", font=("Bahnschrift", 15))
+dfcomment_entry = tk.Entry(main_frame)
+df_button = tk.Button(main_frame, text="SUBMIT", fg="#ffffff", bg="#31b573", font=("Bahnschrift", 17), padx=30, anchor="center", activeforeground="#31b573", activebackground="#ffffff")
 
 root.mainloop()
